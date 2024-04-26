@@ -3,7 +3,7 @@
 import { FormEvent } from 'react';
 
 export default function Form() {
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const response = await fetch(`/api/auth/register`, {
